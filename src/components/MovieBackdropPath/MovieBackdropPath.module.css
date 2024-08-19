@@ -1,0 +1,10 @@
+.movieImg {
+  padding-bottom: 10px;
+}
+
+.movieName {
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: #e85309;
+  font-size: larger;
+}

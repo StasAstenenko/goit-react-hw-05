@@ -1,0 +1,11 @@
+.img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.liElem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}

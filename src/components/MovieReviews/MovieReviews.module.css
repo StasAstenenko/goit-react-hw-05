@@ -1,0 +1,9 @@
+.liElem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.desc {
+  text-align: start;
+}
