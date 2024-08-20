@@ -20,7 +20,7 @@ const HomePage = () => {
       }
     };
     getMovies();
-  });
+  }, [movies]);
   return (
     <div>
       {loading && <Loader />}

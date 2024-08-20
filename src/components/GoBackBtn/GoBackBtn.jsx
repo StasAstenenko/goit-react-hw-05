@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const GoBackBtn = () => {
   const location = useLocation();
-  const goBack = useRef(location.state?.from ?? "/");
+  const goBack = useRef(location.state ?? "/");
   console.log(location);
 
   // return <Link to={location.state ?? "/"} className={style.link}>Go Back</Link>;
