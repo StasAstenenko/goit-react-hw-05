@@ -2,13 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader/Loader";
-// import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/Navigation/Navigation";
 // import HomePage from "./pages/HomePage/HomePage";
 // import MoviesPage from "./pages/MoviesPage/MoviesPage";
 // import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
 // import MovieCast from "./components/MovieCast/MovieCast";
 // import MovieReviews from "./components/MovieReviews/MovieReviews";
-const Navigation = lazy(() => import("./components/Navigation/Navigation"));
+
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
