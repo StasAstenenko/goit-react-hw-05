@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import css from "./SearchMovie.module.css";
 
 const SearchMovie = ({ onSubmit }) => {
   const [value, setValue] = useState("");
@@ -23,8 +24,9 @@ const SearchMovie = ({ onSubmit }) => {
     setValue(e.target.value);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={css.form} onSubmit={handleSubmit}>
       <input
+        className={css.input}
         name="search"
         type="
         text"
@@ -32,7 +34,9 @@ const SearchMovie = ({ onSubmit }) => {
         onChange={handleChange}
         placeholder="enter movie"
       />
-      <button type="submit">Submit</button>
+      <button className={css.examplebtn} type="submit">
+        Submit
+      </button>
       <Toaster position="top-right" reverseOrder={false} />
     </form>
   );

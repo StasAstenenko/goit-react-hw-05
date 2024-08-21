@@ -1,11 +1,11 @@
 import MovieBackdropPath from "../MovieBackdropPath/MovieBackdropPath";
-
+import css from "./MovieList.module.css";
 const MovieList = ({ movies }) => {
   return (
-    <ul>
+    <ul className={css.list}>
       {movies.map((movie) => {
         return (
-          <li key={movie.id}>
+          <li className={css.liElem} key={movie.id}>
             <MovieBackdropPath movie={movie} />
           </li>
         );

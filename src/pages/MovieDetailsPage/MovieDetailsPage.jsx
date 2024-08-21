@@ -4,6 +4,11 @@ import { movieDetails } from "../../api/api";
 import Loader from "../../components/Loader/Loader";
 import css from "./MovieDetailsPage.module.css";
 import GoBackBtn from "../../components/GoBackBtn/GoBackBtn";
+import clsx from "clsx";
+
+const isActive = ({ isActive }) => {
+  return clsx(css.link, isActive && css.active);
+};
 
 const MovieDetailsPage = () => {
   const { movie_id } = useParams();
@@ -27,16 +32,17 @@ const MovieDetailsPage = () => {
   }, [movie_id]);
 
   return (
-    <div>
+    <div className={css.container}>
       <GoBackBtn />
-      <div className={css.container}>
+      <div className={css.containerMovie}>
         {loading && <Loader />}
         <img
-          src={`https://image.tmdb.org/t/p/w500/${movieDetail.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`}
+          height="400"
         />
         <div className={css.desc}>
-          <h2>{movieDetail.original_title}</h2>
-          <p>User score: {Math.round(movieDetail.vote_average)}%</p>
+          <h2 className={css.h2}>{movieDetail.original_title}</h2>
+          <p>User score: {Math.round(movieDetail.vote_average) * 10}%</p>
           <h2>Overview</h2>
           <p>{movieDetail.overview}</p>
           <h2>Genres</h2>
@@ -45,8 +51,12 @@ const MovieDetailsPage = () => {
       </div>
       <h3>Additional information</h3>
       <div className={css.linkContainer}>
-        <NavLink to="credits">Cast</NavLink>
-        <NavLink to="reviews">Reviews</NavLink>
+        <NavLink className={isActive} to="credits">
+          Cast
+        </NavLink>
+        <NavLink className={isActive} to="reviews">
+          Reviews
+        </NavLink>
       </div>
 
       <Outlet />

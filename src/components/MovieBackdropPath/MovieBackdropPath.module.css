@@ -1,10 +1,15 @@
 .movieImg {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .movieName {
   padding-bottom: 15px;
-  text-decoration: none;
-  color: #e85309;
+  color: rgb(248, 208, 11);
   font-size: larger;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+.container:hover .movieName {
+  color: red;
 }

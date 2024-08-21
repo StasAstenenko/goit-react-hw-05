@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.liElem {
+  -webkit-box-shadow: 0px 20px 23px 0px rgba(70, 19, 171, 0.93);
+  -moz-box-shadow: 0px 20px 23px 0px rgba(70, 19, 171, 0.93);
+  box-shadow: 0px 20px 23px 0px rgba(70, 19, 171, 0.93);
+  transition: transform 0.3s linear;
+}
+
+.liElem:hover {
+  transform: scale(1.02);
+}

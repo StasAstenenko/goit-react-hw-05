@@ -23,10 +23,11 @@ const MovieCast = () => {
     };
     fetchMovieDetails();
   }, [movie_id]);
+
   return (
     <div>
       {loading && <Loader />}{" "}
-      <ul>
+      <ul className={css.list}>
         {movieCast?.cast?.map((actor) => {
           return (
             <li className={css.liElem} key={actor.id}>
@@ -35,7 +36,7 @@ const MovieCast = () => {
                 alt={`${actor.name}`}
                 className={css.img}
               />
-              <p>{actor.name}</p>
+              <p className={css.name}>{actor.name}</p>
             </li>
           );
         })}

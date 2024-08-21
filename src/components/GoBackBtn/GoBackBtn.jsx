@@ -9,9 +9,11 @@ const GoBackBtn = () => {
 
   // return <Link to={location.state ?? "/"} className={style.link}>Go Back</Link>;
   return (
-    <Link to={goBack.current} className={style.link}>
-      Go Back
-    </Link>
+    <div className={style.container}>
+      <Link to={goBack.current} className={style.link}>
+        Go Back
+      </Link>
+    </div>
   );
 };
 

@@ -6,8 +6,10 @@ function MovieBackdropPath({ movie }) {
   const location = useLocation();
   return (
     <Link state={location} to={`/movies/${movie.id}`}>
-      <img src={imageMovie} alt={movie.title} className={css.movieImg} />
-      <p className={css.movieName}>{movie.title}</p>
+      <div className={css.container}>
+        <img src={imageMovie} alt={movie.title} className={css.movieImg} />
+        <p className={css.movieName}>{movie.title}</p>
+      </div>
     </Link>
   );
 }

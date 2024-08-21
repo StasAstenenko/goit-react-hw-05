@@ -1,4 +1,12 @@
+.h2 {
+  margin-top: 0;
+}
+
 .container {
+  color: rgb(248, 208, 11);
+}
+
+.containerMovie {
   display: flex;
   border-bottom: 1px black solid;
   padding: 5px 10px;
@@ -17,4 +25,19 @@
   align-items: start;
   gap: 15px;
   border-bottom: 1px black solid;
+}
+
+.link {
+  color: rgb(248, 208, 11);
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.active {
+  color: red;
 }

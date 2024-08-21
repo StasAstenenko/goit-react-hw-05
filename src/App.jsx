@@ -3,6 +3,7 @@ import "./App.css";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader/Loader";
 import Navigation from "./components/Navigation/Navigation";
+import "modern-normalize";
 // import HomePage from "./pages/HomePage/HomePage";
 // import MoviesPage from "./pages/MoviesPage/MoviesPage";
 // import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
