@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import { movieDetails } from "../../api/api";
 import Loader from "../../components/Loader/Loader";
@@ -58,8 +58,9 @@ const MovieDetailsPage = () => {
           Reviews
         </NavLink>
       </div>
-
-      <Outlet />
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
